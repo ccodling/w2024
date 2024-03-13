@@ -32,8 +32,8 @@ while guess != secret_word:
         # loop through the length of the secret word
     else:
         for i in range(length_of_secret):
-        # check if the letters in the guess are in the secret word
-            # check if the position matches
+            # check if the letters in the guess are in the secret word
+             # check if the position matches
             if guess[i] == secret_word[i]:
                 print(guess[i].upper(), end=" ")
             # check if the letter is in the secret word
@@ -42,5 +42,6 @@ while guess != secret_word:
             # print a blank space if the letter is not in the secret word
             else:
                 print("_", end=" ")
-        print()
+    print()
+
 
