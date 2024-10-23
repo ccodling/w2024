@@ -1,14 +1,14 @@
-#determine if a number is prime
-def is_prime(n):
-    if n <= 1:
+# determine if a number is a prime number
+def is_prime(number):
+    name = "Cory"
+    print(f"in the function: -- {name}")
+    if number < 2:
         return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+    elif number % 2 == 1 or number == 2:
+        return True
+    else:
+        return False
 
-num = int(input("Enter a number: "))
-if is_prime(num):
-    print(f"{num} is a prime number")
-else:
-    print(f"{num} is not a prime number")
+number = int(input("What number would you like to test as a prime number:"))
+
+print(is_prime(number))

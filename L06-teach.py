@@ -14,13 +14,19 @@ is_second_rider = input("Is there a second rider? (yes/no) ").lower()
 if is_second_rider == "yes":
     rider2_age = int(input("Enter the age of the second rider: "))
     rider2_height = int(input("Enter the height of the second rider in inches: "))
-    if rider1_age >= 18 or rider2_age >= 19:
-        can_ride = True
-
+    if rider1_height < 36 or rider2_height < 36:
+        can_ride = False
+    else:
+        if rider1_age >= 18 or rider2_age >= 18:
+            can_ride = True
+        else:
+            can_ride = False
 elif is_second_rider == "no":
     # is the first rider able to ride alone
     if rider1_age >= 18 and rider1_height >= 62:
         can_ride = True
+    else:
+        can_ride = False
 else:
     print("in correct value I don't know what to do.")
 
